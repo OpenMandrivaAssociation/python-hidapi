@@ -1,7 +1,7 @@
 
 Name:		python-hidapi
 Version:	0.14.0.post4
-Release:	3
+Release:	4
 Source0:	https://files.pythonhosted.org/packages/source/h/hidapi/hidapi-%{version}.tar.gz
 Summary:	A Cython interface to the hidapi from https://github.com/libusb/hidapi
 URL:		https://pypi.org/project/hidapi/
@@ -10,8 +10,8 @@ Group:		Development/Python
 
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	python-cython
-BuildRequires:	python-setuptools
+BuildRequires:	python%{pyver}dist(cython)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(hidapi-hidraw)
 BuildRequires:	pkgconfig(hidapi-libusb)
@@ -32,8 +32,8 @@ export LDFLAGS="%{optflags}"
 %install
 %py3_install
 
-#check
-#{__python3} tests.py
+%check
+pytest tests.py
 
 %files
 %license LICENSE*.txt
