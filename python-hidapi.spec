@@ -12,6 +12,7 @@ BuildSystem:	python
 BuildRequires:	python
 BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pytest)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(hidapi-hidraw)
 BuildRequires:	pkgconfig(hidapi-libusb)
