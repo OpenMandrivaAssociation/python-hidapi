@@ -1,7 +1,7 @@
 
 Name:		python-hidapi
 Version:	0.14.0.post4
-Release:	4
+Release:	5
 Source0:	https://files.pythonhosted.org/packages/source/h/hidapi/hidapi-%{version}.tar.gz
 Summary:	A Cython interface to the hidapi from https://github.com/libusb/hidapi
 URL:		https://pypi.org/project/hidapi/
